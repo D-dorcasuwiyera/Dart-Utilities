@@ -1,0 +1,85 @@
+void main() {
+  // Task 1
+  print('Sum of 5 and 7 is: ${sum(5, 7)}');
+
+  // Task 2
+  printNumbersFrom1To10();
+
+  // Task 3
+  checkStringValue('hello');
+  checkStringValue('world');
+  checkStringValue('dart');
+
+  // Task 4
+  printNumbersFrom20To10();
+
+  // Task 5
+  checkEvenOrOdd(10);
+  checkEvenOrOdd(5);
+
+  // Task 6
+  print('The largest number is: ${findLargestNumber([1, 2, 3, 10, 5])}');
+
+  // Task 7
+  performDivision(10, 0);
+}
+
+// Task 1: Function to sum two numbers
+int sum(int num1, int num2) {
+  return num1 + num2;
+}
+
+// Task 2: Program using a for loop
+void printNumbersFrom1To10() {
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+}
+
+// Task 3: Program using a switch statement
+void checkStringValue(String value) {
+  switch (value) {
+    case 'hello':
+      print('Hello to you too!');
+      break;
+    case 'world':
+      print('World peace is important.');
+      break;
+    default:
+      print('Unknown string: $value');
+      break;
+  }
+}
+
+// Task 4: Program using a while loop
+void printNumbersFrom20To10() {
+  int num = 20;
+  while (num >= 10) {
+    print(num);
+    num--;
+  }
+}
+
+// Task 5: Program using an if-else statement
+void checkEvenOrOdd(int num) {
+  if (num % 2 == 0) {
+    print('$num is even.');
+  } else {
+    print('$num is odd.');
+  }
+}
+
+// Task 6: Program that outputs the largest number in a list
+int findLargestNumber(List<int> numbers) {
+  return numbers.reduce((current, next) => current > next ? current : next);
+}
+
+// Task 7: Program using a try-catch block
+void performDivision(int a, int b) {
+  try {
+    double result = a / b;
+    print('The result is $result');
+  } catch (e) {
+    print('Error occurred: ${e.toString()}');
+  }
+}
